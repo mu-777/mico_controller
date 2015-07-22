@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<launch>
+    <node name="joystick" pkg="joy" type="joy_node">
+        <remap from="joy" to="joy"/>
+    </node>
+    <!--<include file="$(find jaco_driver)/launch/mico_arm.launch"/>-->
+    <node name="input_generator" pkg="mico_js_controller" type="input_generator.py" output="screen">
+        <remap from="current_PoseStamped" to="mico_arm_driver/out/tool_position"/>
+        <remap from="input_PoseStamped" to="mico_arm_driver/arm_pose/arm_pose/goal"/>
+        <remap from="input_TwistStamped" to="mico_arm_driver/in/cartesian_velocity"/>
+        <remap from="input_method_switcher" to="input_switcher"/>
+        <remap from="joystick" to="joy"/>
+    </node>
+</launch>

@@ -1,0 +1,14 @@
+<library path="src">
+    <class name="MicoButtons" type="rqt_mico_buttons.mico_buttons.MicoButtons"
+           base_class_type="rqt_gui_py::Plugin">
+        <description></description>
+        <qtgui>
+            <group>
+                <label>Master Project GUI</label>
+            </group>
+            <label>Mico Buttons</label>
+            <icon type="theme">system-search</icon>
+            <statustip>A Python GUI plugin for monitoring ROS topics.</statustip>
+        </qtgui>
+    </class>
+</library>

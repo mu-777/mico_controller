@@ -1,0 +1,9 @@
+<launch>
+    <node name="service_caller" pkg="mico_js_controller" type="service_caller.py" output="screen">
+        <remap from="start_arm" to="/mico_arm_driver/in/start"/>
+        <remap from="stop_arm" to="/mico_arm_driver/in/stop"/>
+        <remap from="home_arm" to="/mico_arm_driver/in/home_arm"/>
+        <remap from="switch_mode" to="input_switcher"/>
+        <remap from="joystick" to="joy"/>
+    </node>
+</launch>
